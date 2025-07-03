@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Citations</h1>
+        <div id="quoteDisplay">
+            
+        </div>
+        <button id="generateBtn">Générer une citation</button>
+    </div>
+
+    <script>
+        
+const quotes = [
+    "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi",
+    "La vie, ce n'est pas d'attendre que les orages passent, c'est d'apprendre comment danser sous la pluie. - Sénèque",
+    "Le bonheur est parfois caché dans l'inconnu. - Victor Hugo",
+    "L'avenir appartient à ceux qui croient en la beauté de leurs rêves. - Eleanor Roosevelt",
+    "Chaque jour est une nouvelle chance de changer votre vie. - Inconnu"
+];
+
+
+function generateQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
+    document.getElementById('quoteDisplay').textContent = randomQuote;
+}
+
+
+document.getElementById('generateBtn').addEventListener('click', generateQuote);
+
+
+generateQuote();
+
+    </script>
+</body>
+</html>
